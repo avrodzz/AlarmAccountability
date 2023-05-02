@@ -58,13 +58,37 @@
 			children = (
 				675CC97C2A00D26F0021C2DC /* AppDelegate.swift */,
 				675CC97E2A00D26F0021C2DC /* SceneDelegate.swift */,
-				675CC9802A00D26F0021C2DC /* ViewController.swift */,
-				675CC9822A00D26F0021C2DC /* Main.storyboard */,
+				675CC9922A00D6F70021C2DC /* Model */,
+				675CC9902A00D6DD0021C2DC /* View */,
+				675CC9912A00D6EA0021C2DC /* Controller */,
 				675CC9852A00D2710021C2DC /* Assets.xcassets */,
 				675CC9872A00D2710021C2DC /* LaunchScreen.storyboard */,
 				675CC98A2A00D2710021C2DC /* Info.plist */,
 			);
 			path = AlarmAccountability;
+			sourceTree = "<group>";
+		};
+		675CC9902A00D6DD0021C2DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				675CC9822A00D26F0021C2DC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		675CC9912A00D6EA0021C2DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				675CC9802A00D26F0021C2DC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		675CC9922A00D6F70021C2DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
