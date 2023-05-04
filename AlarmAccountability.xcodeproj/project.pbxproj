@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		675CC97D2A00D26F0021C2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC97C2A00D26F0021C2DC /* AppDelegate.swift */; };
 		675CC97F2A00D26F0021C2DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC97E2A00D26F0021C2DC /* SceneDelegate.swift */; };
-		675CC9812A00D26F0021C2DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC9802A00D26F0021C2DC /* ViewController.swift */; };
+		675CC9812A00D26F0021C2DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC9802A00D26F0021C2DC /* HomeViewController.swift */; };
 		675CC9842A00D26F0021C2DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675CC9822A00D26F0021C2DC /* Main.storyboard */; };
 		675CC9862A00D2710021C2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675CC9852A00D2710021C2DC /* Assets.xcassets */; };
 		675CC9892A00D2710021C2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675CC9872A00D2710021C2DC /* LaunchScreen.storyboard */; };
+		67810EC32A038A3300B17760 /* EditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67810EC22A038A3300B17760 /* EditAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		675CC9792A00D26F0021C2DC /* AlarmAccountability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmAccountability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		675CC97C2A00D26F0021C2DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		675CC97E2A00D26F0021C2DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		675CC9802A00D26F0021C2DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		675CC9802A00D26F0021C2DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		675CC9832A00D26F0021C2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		675CC9852A00D2710021C2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		675CC9882A00D2710021C2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675CC98A2A00D2710021C2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67810EC22A038A3300B17760 /* EditAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 		675CC9912A00D6EA0021C2DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				675CC9802A00D26F0021C2DC /* ViewController.swift */,
+				675CC9802A00D26F0021C2DC /* HomeViewController.swift */,
+				67810EC22A038A3300B17760 /* EditAlarmViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				675CC9812A00D26F0021C2DC /* ViewController.swift in Sources */,
+				675CC9812A00D26F0021C2DC /* HomeViewController.swift in Sources */,
 				675CC97D2A00D26F0021C2DC /* AppDelegate.swift in Sources */,
+				67810EC32A038A3300B17760 /* EditAlarmViewController.swift in Sources */,
 				675CC97F2A00D26F0021C2DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
