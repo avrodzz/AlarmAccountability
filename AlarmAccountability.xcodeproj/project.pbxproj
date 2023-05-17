@@ -310,6 +310,7 @@
 				DEVELOPMENT_TEAM = WXYM8D895K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlarmAccountability/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alarmy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -339,6 +340,7 @@
 				DEVELOPMENT_TEAM = WXYM8D895K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlarmAccountability/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alarmy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

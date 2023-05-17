@@ -56,6 +56,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - (23 * 2), height: 120)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(alarms[indexPath.row].time) was pressed.")
+    }
 }
 
 extension ViewController {
@@ -72,4 +76,11 @@ extension ViewController {
         let alarm10 = Alarm(time: "4:00 AM", description: "Are you working on a project? Probably working hella hard on something - hyperfocus mode")
         return [alarm1, alarm2, alarm3, alarm4, alarm5, alarm6, alarm7, alarm8, alarm9, alarm10]
     }
+    
 }
+
+//struct Colors {
+//    let collectionbackgroundColor = UIColor(red: 11/255, green: 36/255, blue: 71/255, alpha: 1.0)
+//    let cellBackgroundColor = UIColor(red: 25/255, green: 55/255, blue: 109/255, alpha: 1.0)
+//    let cellTimeTextColor = UIColor(red: 165/255, green: 215/255, blue: 232/255, alpha: 1.0)
+//}
