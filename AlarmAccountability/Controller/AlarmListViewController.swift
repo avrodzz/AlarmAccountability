@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlarmListViewController: UIViewController {
     
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AlarmListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return alarms.count
     }
@@ -53,16 +53,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.set(alarm: alarm)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - (23 * 2), height: 120)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(alarms[indexPath.row].time) was pressed.")
+        let alarmDetailsController = AlarmDetailsViewController()
+        alarmDetailsController.time = alarms[indexPath.row].time
+        alarmDetailsController.descript = alarms[indexPath.row].description
+        self.navigationController?.present(alarmDetailsController, animated: true)
     }
+    
 }
 
-extension ViewController {
+extension AlarmListViewController {
     func fetchData() -> [Alarm] {
         let alarm1 = Alarm(time: "7:30 AM", description: "A couple more minutes")
         let alarm2 = Alarm(time: "11:30 AM", description: "Prepare Lunch")

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         //construct a navigation controller
-        let navController = UINavigationController(rootViewController: ViewController())
+        let navController = UINavigationController(rootViewController: AlarmListViewController())
         navController.navigationBar.prefersLargeTitles = true
         
         //change large navbar title to custom color
