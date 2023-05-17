@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6707A5172A148C0600425CB2 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6707A5162A148C0600425CB2 /* UIView+Ext.swift */; };
 		6707A5192A14901C00425CB2 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6707A5182A14901C00425CB2 /* AlarmCell.swift */; };
 		6707A51B2A149CF900425CB2 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6707A51A2A149CF900425CB2 /* Alarm.swift */; };
 		675CC97D2A00D26F0021C2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC97C2A00D26F0021C2DC /* AppDelegate.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6707A5162A148C0600425CB2 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		6707A5182A14901C00425CB2 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		6707A51A2A149CF900425CB2 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		675CC9792A00D26F0021C2DC /* AlarmAccountability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmAccountability.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,14 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6707A5152A148BCA00425CB2 /* Extensions-Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				6707A5162A148C0600425CB2 /* UIView+Ext.swift */,
-			);
-			path = "Extensions-Utilities";
-			sourceTree = "<group>";
-		};
 		675CC9702A00D26F0021C2DC = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +60,6 @@
 			children = (
 				675CC97C2A00D26F0021C2DC /* AppDelegate.swift */,
 				675CC97E2A00D26F0021C2DC /* SceneDelegate.swift */,
-				6707A5152A148BCA00425CB2 /* Extensions-Utilities */,
 				675CC9922A00D6F70021C2DC /* Model */,
 				675CC9902A00D6DD0021C2DC /* View */,
 				675CC9912A00D6EA0021C2DC /* Controller */,
@@ -176,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6707A5192A14901C00425CB2 /* AlarmCell.swift in Sources */,
-				6707A5172A148C0600425CB2 /* UIView+Ext.swift in Sources */,
 				675CC9812A00D26F0021C2DC /* ViewController.swift in Sources */,
 				675CC97D2A00D26F0021C2DC /* AppDelegate.swift in Sources */,
 				675CC97F2A00D26F0021C2DC /* SceneDelegate.swift in Sources */,

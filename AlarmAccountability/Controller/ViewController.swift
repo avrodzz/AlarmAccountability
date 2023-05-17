@@ -9,9 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var tableView = UITableView()
-    var alarms: [Alarm] = []
-    
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -22,6 +19,7 @@ class ViewController: UIViewController {
         cv.register(AlarmCell.self, forCellWithReuseIdentifier: "AlarmCell")
         return cv
     }()
+    var alarms: [Alarm] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +27,6 @@ class ViewController: UIViewController {
         title = "Alarm"
         collectionView.backgroundColor = UIColor(red: 11/255, green: 36/255, blue: 71/255, alpha: 1.0)
         configureCollectionView()
-//        configureTableView()
     }
     
     func configureCollectionView() {
@@ -43,71 +40,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    func configureTableView() {
-        view.addSubview(tableView)
-        
-        tableView.separatorStyle = .none
-//        tableView.contentInset = UIEdgeInsets(top: 100,left: 0,bottom: 0,right: 0)
-        
-        //set delegates
-//        setTableViewDelegates()
-        
-        //set row height
-        tableView.rowHeight = 120
-        
-        //register cells
-        tableView.register(AlarmCell.self, forCellReuseIdentifier: "AlarmCell")
-        
-        //set constraints
-        tableView.pin(to: view)
-    }
-    
-//    func setTableViewDelegates() {
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//    }
 }
-
-//extension ViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return alarms.count
-//    }
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmCell") as! AlarmCell
-//        let alarm = alarms[indexPath.row]
-//        cell.set(alarm: alarm)
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("\(alarms[indexPath.row].time) has been pressed")
-//    }
-//}
-
-//extension CALayer {
-//  func applySketchShadow(
-//    color: UIColor = .black,
-//    alpha: Float = 0.5,
-//    x: CGFloat = 0,
-//    y: CGFloat = 2,
-//    blur: CGFloat = 4,
-//    spread: CGFloat = 0)
-//  {
-//    masksToBounds = false
-//    shadowColor = color.cgColor
-//    shadowOpacity = alpha
-//    shadowOffset = CGSize(width: x, height: y)
-//    shadowRadius = blur / 2.0
-//    if spread == 0 {
-//      shadowPath = nil
-//    } else {
-//      let dx = -spread
-//      let rect = bounds.insetBy(dx: dx, dy: dx)
-//      shadowPath = UIBezierPath(rect: rect).cgPath
-//    }
-//  }
-//}
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -118,11 +51,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlarmCell", for: indexPath) as! AlarmCell
         let alarm = alarms[indexPath.row]
         cell.set(alarm: alarm)
-//        cell.layer.applySketchShadow(color: UIColor.black, alpha: 0.25, x: 2, y: 6, blur: 4, spread: 0)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width - (23*2), height: 120)
+        return CGSize(width: UIScreen.main.bounds.width - (23 * 2), height: 120)
     }
 }
 

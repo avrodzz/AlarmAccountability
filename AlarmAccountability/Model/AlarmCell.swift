@@ -51,7 +51,6 @@ class AlarmCell: UICollectionViewCell {
     func configureDescriptionLabel() {
         descriptionLabel.numberOfLines = 1
         descriptionLabel.adjustsFontSizeToFitWidth = false
-//        descriptionLabel.lineBreakMode = .byTruncatingTail
         descriptionLabel.textColor = UIColor.white
     }
     
@@ -80,9 +79,4 @@ class AlarmCell: UICollectionViewCell {
         alarmToggle.heightAnchor.constraint(equalToConstant: 31).isActive = true
         alarmToggle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -23).isActive = true
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
 }
