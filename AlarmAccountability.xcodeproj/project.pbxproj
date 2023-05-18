@@ -15,6 +15,7 @@
 		675CC9812A00D26F0021C2DC /* AlarmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CC9802A00D26F0021C2DC /* AlarmListViewController.swift */; };
 		675CC9862A00D2710021C2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675CC9852A00D2710021C2DC /* Assets.xcassets */; };
 		675CC9892A00D2710021C2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675CC9872A00D2710021C2DC /* LaunchScreen.storyboard */; };
+		67A801972A15BB31004882FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A801962A15BB31004882FD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		675CC9852A00D2710021C2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		675CC9882A00D2710021C2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675CC98A2A00D2710021C2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A801962A15BB31004882FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		675CC97B2A00D26F0021C2DC /* AlarmAccountability */ = {
 			isa = PBXGroup;
 			children = (
+				67A801952A15BB12004882FD /* Utilities */,
 				675CC97C2A00D26F0021C2DC /* AppDelegate.swift */,
 				675CC97E2A00D26F0021C2DC /* SceneDelegate.swift */,
 				675CC9922A00D6F70021C2DC /* Model */,
@@ -95,6 +98,14 @@
 				6707A51A2A149CF900425CB2 /* Alarm.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		67A801952A15BB12004882FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				67A801962A15BB31004882FD /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				675CC9812A00D26F0021C2DC /* AlarmListViewController.swift in Sources */,
 				6707A51D2A14D8A600425CB2 /* AlarmDetailsViewController.swift in Sources */,
 				675CC97D2A00D26F0021C2DC /* AppDelegate.swift in Sources */,
+				67A801972A15BB31004882FD /* Constants.swift in Sources */,
 				675CC97F2A00D26F0021C2DC /* SceneDelegate.swift in Sources */,
 				6707A51B2A149CF900425CB2 /* Alarm.swift in Sources */,
 			);

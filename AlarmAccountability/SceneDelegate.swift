@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //change when scrolled navbar title to custom color
         navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        navController.navigationBar.barTintColor = UIColor.clear
+        navController.navigationBar.barTintColor = AlarmViewColors.alarmNavbarTintColor
         
         //gets rid of Storyboard and starts the app with the given NavigationController
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)

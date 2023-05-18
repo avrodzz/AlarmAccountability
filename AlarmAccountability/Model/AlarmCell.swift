@@ -14,7 +14,7 @@ class AlarmCell: UICollectionViewCell {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor(red: 25/255, green: 55/255, blue: 109/255, alpha: 1.0)
+        contentView.backgroundColor = AlarmViewColors.cellBackgroundColor
         
         layer.cornerRadius = 20
         clipsToBounds = true
@@ -45,13 +45,13 @@ class AlarmCell: UICollectionViewCell {
         timeLabel.numberOfLines = 0
         timeLabel.adjustsFontSizeToFitWidth = true
         timeLabel.font = UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.bold)
-        timeLabel.textColor = UIColor(red: 165/255, green: 215/255, blue: 232/255, alpha: 1.0)
+        timeLabel.textColor = AlarmViewColors.cellTimeTextColor
     }
     
     func configureDescriptionLabel() {
         descriptionLabel.numberOfLines = 1
         descriptionLabel.adjustsFontSizeToFitWidth = false
-        descriptionLabel.textColor = UIColor.white
+        descriptionLabel.textColor = AlarmViewColors.cellDescriptionTextColor
     }
     
     func configureAlarmToggle() {

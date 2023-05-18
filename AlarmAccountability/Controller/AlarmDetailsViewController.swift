@@ -15,7 +15,7 @@ class AlarmDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 25/255, green: 55/255, blue: 109/255, alpha: 1.0)
+        view.backgroundColor = AlarmViewColors.collectionbackgroundColor
         if let validTimeText = time {
             timeLabel.text = validTimeText
         }
@@ -37,7 +37,7 @@ class AlarmDetailsViewController: UIViewController {
         timeLabel.numberOfLines = 0
         timeLabel.adjustsFontSizeToFitWidth = true
         timeLabel.font = UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.bold)
-        timeLabel.textColor = UIColor(red: 165/255, green: 215/255, blue: 232/255, alpha: 1.0)
+        timeLabel.textColor = AlarmViewColors.cellTimeTextColor
     }
     
     func setTimeLabelConstraints() {
@@ -49,7 +49,7 @@ class AlarmDetailsViewController: UIViewController {
     func configureDescriptionLabel() {
         descriptionLabel.numberOfLines = 1
         descriptionLabel.adjustsFontSizeToFitWidth = false
-        descriptionLabel.textColor = UIColor.white
+        descriptionLabel.textColor = AlarmViewColors.cellDescriptionTextColor
     }
     
     func setDescriptionLabelConstraints() {

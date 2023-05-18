@@ -25,7 +25,7 @@ class AlarmListViewController: UIViewController {
         super.viewDidLoad()
         alarms = fetchData()
         title = "Alarm"
-        collectionView.backgroundColor = UIColor(red: 11/255, green: 36/255, blue: 71/255, alpha: 1.0)
+        collectionView.backgroundColor = AlarmViewColors.collectionbackgroundColor
         configureCollectionView()
     }
     
@@ -85,8 +85,3 @@ extension AlarmListViewController {
     
 }
 
-//struct Colors {
-//    let collectionbackgroundColor = UIColor(red: 11/255, green: 36/255, blue: 71/255, alpha: 1.0)
-//    let cellBackgroundColor = UIColor(red: 25/255, green: 55/255, blue: 109/255, alpha: 1.0)
-//    let cellTimeTextColor = UIColor(red: 165/255, green: 215/255, blue: 232/255, alpha: 1.0)
-//}
