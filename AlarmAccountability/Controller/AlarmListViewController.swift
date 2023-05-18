@@ -65,7 +65,7 @@ extension AlarmListViewController: UICollectionViewDelegate, UICollectionViewDat
         alarmDetailsController.descript = alarms[indexPath.row].description
         self.navigationController?.present(alarmDetailsController, animated: true)
     }
-    
+
 }
 
 extension AlarmListViewController {
