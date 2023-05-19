@@ -13,4 +13,5 @@ enum AlarmViewColors {
     static let cellTimeTextColor = UIColor(named: "CellTimeTextColor")
     static let cellDescriptionTextColor = UIColor(named: "CellDescriptionTextColor")
     static let alarmNavbarTintColor = UIColor(named: "AlarmNavbarTintColor")
+    static let datePickerBackgroundColor = UIColor(named: "CellBackgroundColor")
 }

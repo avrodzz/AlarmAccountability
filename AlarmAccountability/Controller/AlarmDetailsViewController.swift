@@ -13,6 +13,7 @@ class AlarmDetailsViewController: UIViewController {
     var timeLabel = UILabel()
     var descriptionLabel = UILabel()
     var datePicker = UIDatePicker()
+    let tableView = UITableView()
     var deleteAlarmButton = UIButton()
     
     override func viewDidLoad() {
@@ -28,16 +29,19 @@ class AlarmDetailsViewController: UIViewController {
         view.addSubview(timeLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(datePicker)
+        view.addSubview(tableView)
         view.addSubview(deleteAlarmButton)
         
         configureTimeLabel()
         configureDescriptionLabel()
         configureDatePicker()
+        configureTableView()
         configureDeleteButton()
         
         setTimeLabelConstraints()
         setDescriptionLabelConstraints()
         setDatePickerConstraints()
+        setTableViewConstraints()
         setDeleteButtonConstraints()
     }
     
@@ -56,6 +60,14 @@ class AlarmDetailsViewController: UIViewController {
     
     func configureDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
+        datePicker.backgroundColor = AlarmViewColors.datePickerBackgroundColor
+    }
+    
+    func configureTableView() {
+        tableView.isScrollEnabled = false
+        tableView.rowHeight = 50
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func configureDeleteButton() {
@@ -72,37 +84,68 @@ class AlarmDetailsViewController: UIViewController {
     
     func setTimeLabelConstraints() {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
-        timeLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        timeLabel.widthAnchor.constraint(equalToConstant: 133).isActive = true
+        timeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        timeLabel.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        timeLabel.textAlignment = .center
+        timeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        timeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
     func setDescriptionLabelConstraints() {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         descriptionLabel.centerYAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 15).isActive = true
-        descriptionLabel.widthAnchor.constraint(equalToConstant: 253).isActive = true
+        descriptionLabel.textAlignment = .center
+        descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
     func setDatePickerConstraints() {
         datePicker.translatesAutoresizingMaskIntoConstraints = false
-        datePicker.centerYAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 100).isActive = true
-        datePicker.widthAnchor.constraint(equalToConstant: 358).isActive = true
+        datePicker.centerYAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 150).isActive = true
+        datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+    
+    func setTableViewConstraints() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 50).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     func setDeleteButtonConstraints() {
         deleteAlarmButton.translatesAutoresizingMaskIntoConstraints = false
-        deleteAlarmButton.centerYAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 100).isActive = true
-        deleteAlarmButton.widthAnchor.constraint(equalToConstant: 358).isActive = true
+        deleteAlarmButton.centerYAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 75).isActive = true
+        deleteAlarmButton.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        deleteAlarmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+
+}
+
+extension AlarmDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.backgroundColor = UIColor(named: "CellTimeTextColor")
+        cell.selectionStyle = .none
+        cell.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        return cell
     }
-    */
+}
 
+extension AlarmDetailsViewController {
+    func fetchData() -> [ActionButton] {
+        let actionButton1 = ActionButton(title: "Repeat")
+        let actionButton2 = ActionButton(title: "Label")
+        let actionButton3 = ActionButton(title: "Sound")
+        let actionButton4 = ActionButton(title: "Snooze")
+        
+        return [actionButton1, actionButton2, actionButton3, actionButton4]
+    }
 }

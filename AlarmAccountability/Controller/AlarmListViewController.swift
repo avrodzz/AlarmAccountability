@@ -9,7 +9,7 @@ import UIKit
 
 class AlarmListViewController: UIViewController {
     
-    fileprivate let collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
