@@ -24,6 +24,7 @@
 ### Day 3: Make Figma Wireframes + Implementation: **AlarmDetails**
 
 - Transfer pen and paper wireframes to Figma
+- Finished High Fidelity Wireframes for AlarmDetailsVC in Figma
 
 #### Development
-- to be updated...
+- Added constraints to several elements for a responsive layout, as well as a UITableView for the Alarm editing buttons.
